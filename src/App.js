@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/header";
+import Filter from "./components/filter/filter";
+import ProductsList from "./components/products-list/products-list";
+
+import "./assets/css/bootstrap.min.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="container my-5">
+  <Header />
+  <div className="row mt-5">
+  <Filter />
+  <ProductsList />
+  </div>
+  </div>
   );
 }
 
