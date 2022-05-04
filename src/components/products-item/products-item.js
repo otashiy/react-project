@@ -1,4 +1,4 @@
-const ProductsItem = ({title, img, price, model, addedDate}) => {
+const ProductsItem = ({title, img, price, model, addedDate, benefits}) => {
  const productMark = `${price * 0.25}`
     return (
       <li className="col-4 products-item">
@@ -19,9 +19,10 @@ const ProductsItem = ({title, img, price, model, addedDate}) => {
             <div className="position-absolute top-0 end-0 d-flex">
               <button className="btn rounded-0 btn-secondary products__item-edit" data-id="124" data-bs-toggle="modal" data-bs-target="product-modal"><i className="fa-solid fa-pen" style={{pointerEvents: "none"}}></i></button>
               <button className="btn rounded-0 btn-danger products__item-delete" data-id="124"><i className="fa-solid fa-trash" style={{pointerEvents: "none"}}></i></button></div>
-              <ul className="d-flex flex-wrap list-unstyled"><li className="badge bg-primary me-1 mb-1"><button className="btn btn-sm badge rounded-pill btn-primary">32gb</button></li>
-              </ul>
-              <ul className="d-flex flex-wrap list-unstyled"><li className="badge bg-primary me-1 mb-1"><button className="btn btn-sm badge rounded-pill btn-primary">1tb</button></li>
+              <ul className="d-flex flex-wrap list-unstyled">
+              <li className="badge bg-primary me-1 mb-1">
+               {benefits}
+                  </li>
               </ul>
             </div>
           </div>
