@@ -11,6 +11,7 @@ import AddModal from "./components/add-modal/add-modal";
 
 function App() {
   const [ isModalOpen, setModalOpen ] = useState(false);
+  const [ addProduct, setAddProduct ] = useState(products);
   
   return (
   <div className="container my-5">
@@ -18,7 +19,7 @@ function App() {
 
   <div className="row mt-5">
   <Filter products={products} />
-  <ProductsList products={products} />
+  <ProductsList products={products} addProduct={addProduct} setAddProduct={setAddProduct} />
   </div>
   <AddModal isOpen={isModalOpen} close={setModalOpen} />
   </div>
